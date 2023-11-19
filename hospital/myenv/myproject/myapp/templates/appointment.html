@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <title>appointment page</title>
+        <style>
+            body {
+          background-image:url('https://ak7.picdn.net/shutterstock/videos/1012414637/thumb/1.jpg?ip=x480');
+          width: 100%;
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+           }
+           .main{
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 50%;
+            border: 0;
+            box-sizing: border-box;
+            font-size: 14px;
+           }
+
+           #logbox{
+          padding: 10px;
+          margin: 50px auto;
+          width: 340px;
+          background-color: #fff;
+          -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+          max-width: 100%;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius:20px;
+          }
+        h1 {
+          text-align: center;
+          font-size: 175%;
+          color: #757575;
+          font-weight: 300;
+        }
+        h1, input {
+          font-family: "Open Sans", Helvetica, sans-serif;
+        }
+
+
+        .input {
+          width: 75%;
+          display: block;
+          margin: 0 auto 15px;
+          padding: 0 15px;
+          border: none;
+
+        }
+        .input:focus {
+          outline: none;
+          border-bottom-color: #3CC !important;
+        }
+        .input:hover {
+          border-bottom-color: #dcdcdc;
+        }
+        .input:invalid {
+          box-shadow: none;
+        }
+
+        .pass:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0 1000px white inset;
+        }
+
+        .inputButton {
+          position: relative;
+          width: 95%;
+          height: 60px;
+          display: block;
+          margin: 30px auto 30px;
+          color: white;
+          background-color: rgb(71, 102, 213);
+          border: none;
+
+          -moz-box-shadow: 0 5px 0 #8f83df;
+          box-shadow: 0 5px 0 #7989cf;
+        }
+        body img {
+        width:800px;
+        height:600px;
+        }
+        .inputButton:hover {
+          top: 2px;
+          -webkit-box-shadow: 0 3px 0 #4e70e9;
+          -moz-box-shadow: 0 3px 0 #4389d9;
+          box-shadow: 0 3px 0 #387bd8;
+        }
+        .inputButton:active {
+          top: 5px;
+          box-shadow: none;
+        }
+        .inputButton:focus {
+          outline: none;
+        }
+
+
+            </style>
+    </head>
+    <body>
+        <form method="POST" >
+            {% csrf_token %}
+            <br>
+            <div class="col-md-6" >
+                <div id="logbox" style="background-image:url('https://image.freepik.com/free-vector/overlapping-forms-background_23-2148658720.jpg')">
+
+<label for="patientname" style="margin-left: 10px;" class="input pass " >Patient name: <span style="color: #FF6347">*</span></label><br>
+<input id="patientname" class="main"  type="text" name="patientname" >
+<br><br>
+
+
+ <label for="contactnum" style="margin-left: 10px;" class="input pass " > Contact number:</label><br>
+<input type="text" class="main" id="contactnum" name="contactnum">
+<br><br>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4" style="margin-left: 25px;">
+                       Date
+                    </label>
+                    <br><br>
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="date"id="date" name="date"class="main">
+                    </div>
+
+                </div>
+<br>
+                    <br>
+                 <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4" style="margin-left: 25px;">
+                       Symptoms
+                    </label>
+                     <br>
+                     <br>
+                    <div class="col-sm-8 col-lg-8">
+                        <textarea id="symptoms" class="main"  name="symptoms" required ></textarea>
+                    </div>
+                </div>
+
+                  <br>
+<button type="submit" name="submit" value="submit" style="margin-left: 10px" class="inputButton">CONFIRM</button>
+                   <a href="/UserModule">BACK</a>
+
+              </form>
+
+</div>
+      </div>
+          </div>
+
+</body>
+</html>
+    <!--<style>
+
+
+
+    </style>
+</head>
+<body>
+
+
+ <nav class="navbar navbar-expand-lg nav-back fixed-top"
+    id="mainNav">
+      <div class="container">
+           <h2>APPOINTMENT FORM</h2>-->
+         <!-- <a class="navbar-brand" href="#">Medical</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button"
+           data-toggle="collapse" data-target="#navbarResponsive"
+           aria-controls="navbarResponsive" aria-expanded="false"
+           aria-label="Toggle navigation"><i class="fas fa-syringe fa-2x"></i>
+           </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link"
+                  href="/about">Services</a></li>
+                  <li class="nav-item"><a class="nav-link"
+                    href="/about">About</a></li>
+                  <li class="nav-item"><a class="nav-link"
+                    href="/about">Medical Camps</a></li>
+
+                  <li class="nav-item"><a class="nav-link"
+                    href="#signup">Contact</a></li>
+              </ul>-->
+         <!-- </div>
+      </div>
+  </nav>
+
+
+ <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative">
+      <h1>24/7 Care is available</h1>
+
+      <a href="/about" class="main-btn">Get Started</a>-->
+    <!--</div>
+  </section>
+
+
+<form method="POST">
+
+ {% csrf_token %}
+<br>
+
+<label for="patientname" >Patient Name: <span style="color: #FF6347">*</span></label><br>
+    <input id="patientname" type="text" name="patientname" >
+    <br><br>
+    <label for="age">Age:</label><input type="text" id="age" name="age">
+
+
+<br><br>
+    <label for="gender" style="margin-left: 10px;">Gender:</label>
+     <br><br>
+     Male<input id="male" type="radio" name="gender" value="male">
+     Female<input id="female" type="radio" name="gender" value="female">
+
+     Other<input id="other" type="radio" name="gender" value="other">
+
+<br><br>
+<label for="contactnum">Contact Number:</label>
+    <input type="text" id="contactnum" name="contactnum" >
+<br><br>
+<label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <br><br>
+    <label for="doctorname">Doctor Name:</label>
+    <input type="text" id="doctorname" name="doctorname">
+    <br><br>
+     <label for="date">Date:</label>
+    <input type="text" id="date" name="date"><br><br>
+
+    <button type="submit" id="submit" name="submit" style="margin-left: 10px" class="inputbutton">CONFIRM</button>
+
+</form>
+</div>
+</body>-->
+

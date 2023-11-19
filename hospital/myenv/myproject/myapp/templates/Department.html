@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <br><br>
+    <h1>Department Section</h1>
+<style>
+body
+{
+background-color:#eca1a6;
+}
+h1 {
+  text-align: center;
+  font-size: 175%;
+  color: #757575;
+  font-weight: 300;
+}
+h1, input {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+
+.input {
+  width: 75%;
+  display: block;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  border: none;
+
+}
+.input:focus {
+  outline: none;
+  border-bottom-color: #3CC !important;
+}
+.input:hover {
+  border-bottom-color: #dcdcdc;
+}
+.input:invalid {
+  box-shadow: none;
+}
+
+.pass:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.inputButton {
+  position: relative;
+  width: 95%;
+  height: 60px;
+  display: block;
+  margin: 30px auto 30px;
+  color: white;
+  background-color: #3CC;
+  border-radius:10px;
+  -moz-box-shadow: 0 5px 0 #2CADAD;
+  box-shadow: 0 5px 0 #2CADAD;
+}
+   #logbox{
+  padding: 10px;
+  margin: 50px auto;
+  width: 340px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius:10px;
+  background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PEBAPEA8PDw8QFQ8QDw0QDw8QEA8NFhUWFhYRFhYYHSggGBomGxUVITEhJSorLi4uFx8zODMtNyotLisBCgoKDg0OFhAQFysdHR0tKystLS0tLS0tLS0rLS0tLSstLS0rLS0rKy0tLS0tLS0tLS0tLSstKy0tLS0rLS0rK//AABEIALcBEwMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAQIDBAUGB//EADwQAAEDAgMDCAcIAgMBAAAAAAEAAhEDIQQSMUFRYQUTIjJxgZGxFBUjUnKhwUJTYoKSstHwM5NjZOGi/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAJREBAAIBBAICAgMBAAAAAAAAAAECEQMSE1EhMTJhIkEEUvBC/9oADAMBAAIRAxEAPwD9QURFh6hRFEUREQRFUQEREFRRVAREQFVEQEREBERAREQFFUVEWTGyYCi2Yfrt7/JEmcQy9Fdw8U9FduHiF3BVa2uHNZ5/ort3zCejO3fML0ETanPZwejO3fMJ6O7d8wu9CE2nNLgFB275ha3NIsRC9CjouTlB0FvEFSYw3TUm04aUWMoo7MlERRBRERUVREBERAREQFVEUFREQFVEQEREBERAREVBEUQVZ4frt7/IrWtmH67e/wAiqk+peiFkoFVt4hERVBRVEGuhp3rh5T6zOx30XbQ0PauHlXrM7HfRZt6dNH5Q1AosQUWHsbERRRBERUEREBERAREQEVUUFRREFRRVAREQEREBFFVREREFWdDrt7/IrxnYxxqVGhxApmCNPdPfaV6uFdLmf3YVWc5iXrBVQKrbxiIiqCIiDVQ0K4eVeszsd9F3UNq4eVutT/N9Fm3p00flDnBRQIsPa2oiIyIiICKKoCIiAiIgIiICIigqKIgIqiCKqIqKiiICIoivn3H2uJ+Jv7Wr3sAelT/uwrwag9riLRcX39Ft/p3L3sB1qff+0o5V/wC3sqqBVdHlFFVFUERAg1UNq4eVutT/AD/Rd1HauHlfrU/z/RZt6dNH5w5wigRc3tbkRFWRERAREQFFUQEREUREQEREBEREEREBERARFEVVERB5ePbeoduVv7l6WA69Pv8A2lebj+s74R5lelyf16ff+0p+3P8Av/v09lVRVdHjFERUECIg1Udq4OV9af5/ou+j9pcHK/Wp/n+izb06aPzhzhEARc3tbkRFWRFYVy2kwBvJAHiUERYOr0x9qfhBPnCx9Lp/j8G/yibobUWDcTTO1w7W/wAFbGieqQ7sN/DVDMMUVKiNCIogqKKoCIiAiIgIiiAiIgIihVHmY/V/wjzK9Lk/r0+/9pXmY7Wp2N8yvT5OHTZ3/tKR7c/7vZREXR4xERARREGujq5cHK+tP8/0XdR1cuHlbWn+b6LNvTpo/OHOEQIub2NyyaJWIWPKXRYGAw43d8O7+7lWLWw04jHNbZkOPvnQdg29pXA+o95kkk7ys6dFdVOmAs5yRXtyNw5OpK2DChdYarCNYcnoymVzbgmy7IULUMOjD1m1RBtUG3eVg4EGDqFyPpkEObYjRdxfzjA/7TbOC1E5Zj8Z+mARQFWUbVECICKoiIiqIqIqoiCiqIqKFZIg8nHA+0gaBl/H+F6fJvXZ2O8itVXDhxm/ESQD271sIiIJFxcWsmWdvi329pF83XNTO6Kjw2YAngsSKn3j/FXe8/DPb6ZRfLuZU+8f4rS+jU+8qfqKb/peCe31yL48UKv3lT9RV9GqfeVP1FOT6OCe31NHVy4eVnDMwbekY4WXh+iVPvKn6yu3C4bLvJ2kkknvUm2WqaW2c5dACLJFHd0YUS6To2687EOL3k7/AC2BejRtTed9v74rhptuStT6co83n6VjVsASFVh1ElQqKjJFAqghCywTsr42Ot3qLW54a5rpAAIJOgAm6QlozEtjhlc5u4x3bFVhia9N9SadRjxADsjmuAdxjgoXRHcrPtazmsS6xSG9XmxvUl0nK0O4zF4Goi+zxWLZk9EZpbLQYiwtcbY0W8PHy27ZZBv8kDBv8lhVkmMuUw6wMHKbZpiBCVC4wCwDdcEm0buITBy27Z5Bv8kyDf5LBxIaQW2ObpOcHG4MaBVpc0HoWAEkuBAy6mI8UwctmWQb/JMg3+SxpBwuGTN+s0C4EWjhZYtzO6QbOaDZ4b1YnUXBOtkwctu2zIN/zCmUb/mFiczjOS4zCA5oIJkanaO9Wo57jlyAEXy5mnZv0vmCYhOW3awN/wAwoQ33vmFCXjoc2RnJN6ucm2ydIjSQge9gHsz0sjQTVBBIsAG3DZVxCctuxwaNvzCxcG79eIUBcxodkMNkZxWht7XY2Qb22rIGo0ueac6F0VWtggHWNdZiExBy37aKeRwkE6xJIkq5G+8fEfwtoNRxz5JluW1UNOUmQ7MII8Ea+rUyuDBDTLemDMHSYBGibYTlv20ZG+8fELTTMkjcSPArsqmrlOZhDSWyTVD8sOkQIG2y48Obu+J3mVi0Q76F7WmctuiyDHe679JXocm0QRnIkmY4ALvyBIq1fVxOIh8+ZGoI7QQs2r23tBFwPDULyMTTDHwNDccOCTXDVNSLeGCKSiy6Oijek7t/hctNdGBMtezbr/fBcuhINirPpinys2lFgSsgo2FUIiCqFFHFBACTAEqUG5qjWm0dIzaw/wDYXZh2Brb7buO5oWeHpCo0vcOvoDsbs+nYcy3FXC2v5mIebyi5prZh1j0Z/C3T5lyxc7TtHmtFdhFVwtawjctjtW9rfNZmfLrp+KQ9NlbKT0XOv9loOobtm2nko2rDnOyuhxZFhaLXkwgrBsgvy9KSMpdmbA4LKvimOaQHXMbHDaNpC6vAwdWJdnDXxkyjog3mc2sQq+tmLSGvIbMwAZuNIMbCoMS1u1xzASCH9GG2gRvUw9VjQ3M5wIDhHSy9YmbCCgVKmZgaGukakNESBpYmDwWTq0tewMfJz/ZAjNNyAZ267VhRrtbmcSevULR0spDoiYHBG12Fz3Fzg0mmQQH6tF5gTE79URspV8sAsfMMbAa2bA8ZI1+a10KmQNBY+QHDqC5LgbEkHuVfiGOfMnLlgkB0z0uEq1sSxxZBmHAmzhaRwugMq5JLmVAC4unKAADNiXEQbqGo4EuyVBIFzT0jLJMmBodqmIxDDTLGuJPEOBsZNyIWdTFU4e0OJLs0Ah+pGlxYII6sS5rwypAzR0JJkGCIMHZtWLqxeGQ2oQ1zXTkEEDYIJus6OLpta0FxBhsjK83AAtbgteFrsa1uZxDhmtDiLmdgjaEErVi9jmBtSTqSwQDmm+UkjSFm/Elwc0MqyQ4QWNESNsGYvqsKVemC4uJ6xc2A7QzEx32KHEUy5xJOUxBAdNo7xdBnSxWUNYadQkBos0XgaiTJFty0MIaGtdTqk3ALS5oMmY1E6rOriWl4cJIAI0cLw7ZqrWxTXFhEw1wcbEWtvQYVHCIFOq2S3pPc4ixB2k7lw4V3W+J/7iu+riQ5jW/alsw0htr2nsXm4XR3xO8ysXej+N7l9HyafZt7PquoOXHyd/jZ2BdJK1HpzvP5SycV5XKh6TD8X0XoFy8zlR12drvopb01o/OGqVFAUXN7VpVCxwd49i7azOdbnDekLtExmbuJ2LheF28nVxGTQjZvG9arP6cNWJj8oVrmvb+E2vYscLFpGwg2XLUaWmPmuzF0yJqMEk9en943h+IDxiN0c3PseBeWnqu+natTDjp6u2cS1yqsdDCzC5vYixbdwGzUrJxXPUq5RxdYHcN6QxqW21mXa5+chmodqP8AjGw8Cbd66sTiRTYXbh4nZ815HJtfNnqbHHIzgxlp/Vm7gFq5RrOc5rJBA6RAEdk3XWZxDx6dd04XDtJ6RuTJJ3krdUbp2t81KVlk7Z2t81xh7p9O2nUgGHUwZMh57LrcyuJvUpRshwB81pYyRIph5l0kkCIiNQujmGe63wC7vnuXD1WtElwAzE5ej0gWiCqyo3PUdna0E0yCS2HAAyLrLGUwMkACXtaYESCDIVrsDWmzQ7UFrYtmH0IRGDqrXVMweGjJGaWmHZtN0wlas1zmEOEDNLpaQOrdbBTAaZa246MNv1dp7QbrXRgMzuaHC+jczy4vI7xoguLqtLMoeHn4mkmAZNlnWrNLXjnGuJzQA5s30aANVhhqYOazSA94u2TlEQBuWNOnNSoAGw00rFsgNLZcANhKDbhq7Ghs1W9VnRLmjLAvxWvBVmtY0Oe1pGaWlwBnMTJn+3SpS9plaGDoSAWgtzZokhXEU2h1MBrRMzYCbt1QY4es0F5NQN9o9wBLQHtOhvs7FW1m53uztAOSHSIdAuAVjiGQyCG5tr2tDQZnTuC216bQxxytB6UHKAdbfRBqqVmmpOcZcsZw6wJzbd6tas0mnDw7KQSZmLi5hbaLWZASGnot1A90eK04JrCxswTBmQ33jtI170ExNVpp5Q/ORF5lxA2mF0OxbLw8dtzdaMGaftJyf5HxOXq2iOC3E0v+L/4Qc1etmEZw8yDZhbAAOq8zB9U9p816NZwIbPNTmH+MzbK6V52B6ixd6f43uXv4ExTZ8I8lvJXLhXdBvwt8lm+qBqVuPTjefMs3Febyo69P830XaXrzeUT06Y+M/tWbemtH5woRAiw9zJy0VJFwYIuDxXQQtbmqI6MJjs4MkZhq0CI48V53KR5suqsBLHXrUxqD963jvG3UXkOwqsLTmbYj58FprYk9+7itxfx5ePU0sTmPTbheUAYaSCDdrhoRvC9JjpXymIwbqdRrYLQ/pgbG3uBw4bPCPpcGIaBwWJl30c7fLc9eDyriH3DbOsxnxuMAngF9AV5+KwvOOa0WM67htPgmWtSu6GnDvDGtY2zWANHwgQFlRaSS46ny2LEsz1HEWYLAARPFdjWQkzlnSpt8smrJ2ztb5o0K1LX3QY7FIdf066eHY6S4SSTtIsLLGjhmEuBFgYF42u8f/FwP5QpyJbUkGR7NhynWxPFT1my/+W9zNNhkyd44rruh4OO3T0Bh2CoWwA3JPfIGuqtTDsFSkA0Q7OTxgSL7O5ec7lNhJJ50kiDNNhlu6IhPWbJafagtnLFNgAnW0Qm6Djt09V2DpQYYJAO02Kxw+FpuaHOaCTmk33leX61bf/MM2sUqQntsg5WAsOfAvA5umY8Qm6Djt09g4Ol7g3au08UOCpaZBbS7v5Xj+uTvxH+uj/Cnrk78R/rofwm6Djt09n0KlEZBGsS7XxQYOlpkF9RLr/NeL66P/Y/10FPXTv8As/66CboOO3T1amGptewNaBmzA63Flm3D0J6IbInR1xGuhXiu5XJIJbiCR1TkoiN+n1UHK7vdxH6KATdBx26epg6VIsYXBud2bUwXHMRa/YsDSBzmBDXOaXOLREG1ydxC80cqQABTrgC4GWkYvO3ioeVDcCnXhxlw9mQTvMlN0HFbp61KmMzg5s5QLS2BO3VayyebAAJc27m5Q15gHMOkYGu3btXmetXSSKdaTqZbJ7VPWb7eyqyOqcwEDSBCboOK/T0i2wcIIJLZDmkZhMix2EEdy48APZt7Fq9Y1HW5p/DM+Wg74712YalDQNwWbTl6NCk1zl2Yer0G9keFljWcDqvOrPqUz0W52n7MwQd4Wk447aVXwb/K1FoctTStmcQ9bnlxVn5qtvsgDvN/KFyek1HWbTLfxPIt+Ua+K7MJQy63JuSdpUtbLpo6U1nMt4Cq2Qiw9CErW5VEGh4Xm42iCFUWZQwOMhnM1W84wdQ/apngdy9Sha3ZB3jYURISIxLoWgi7iCQQ12hjYqiq29NeHpwFtKIoK1ZlEVVr5sK82ERVTmwnNjciIHNjcnNjciIHNjcnNjciIHNDcnNDciIHNjcnNjciIHNjchpBEQTmhuTmgiIKKYWxrURBi9q182qiAKa2BqIqMoVRFEf/2Q==');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  }
+
+
+ .main{
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 50%;
+            border: 0;
+            box-sizing: border-box;
+            font-size: 14px;
+           }
+h1
+.inputButton:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #2CADAD;
+  -moz-box-shadow: 0 3px 0 #2CADAD;
+  box-shadow: 0 3px 0 #2CADAD;
+}
+.inputButton:active {
+  top: 5px;
+  box-shadow: none;
+}
+.inputButton:focus {
+  outline: none;
+}
+
+</style>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <div class="col-md-6">
+           <div id="logbox">
+    <label for="departmentnumber">Department Number:</label>
+    <input id="departmentnumber" type="text" name="departmentnumber"  >
+      <br><br>
+    <label for="departmentname">Department Name:</label>
+    <input id="departmentname" type="text" name="departmentname" required style="border: solid 1px;margin-left:12px" >
+      <br><br>
+    <label for="description">Doctor Name:</label>
+    <input id="description" type="text" name="description" required style="border: solid 1px;margin-left:44px">
+      <br><br>
+    <button type="submit"  name="submit" style="margin-left: 10px" class="inputbutton" >SAVE</button>
+   <!--<button type="submit"  name="submit" style="margin-left: 10px" >ADD</button>
+    <button type="submit"  name="submit" style="margin-left: 10px" >DELETE</button>-->
+
+           </div>
+</div>
+</form>
+</body>
+</html>
